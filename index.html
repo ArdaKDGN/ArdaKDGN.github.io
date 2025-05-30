@@ -5,114 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigorta Acente Yazılımı</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto+Mono&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
         * { box-sizing: border-box; }
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, #f8f9fa, #e0f7fa);
-            color: #1a237e;
+            font-family: 'Fira Code', monospace;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #f8f9fa;
+            overflow-x: hidden;
         }
         header {
             text-align: center;
             padding: 80px 20px 40px;
-            background: linear-gradient(90deg, #1a237e, #0d47a1);
+            background: linear-gradient(90deg, #00c6ff, #0072ff, #00c6ff);
             color: #fff;
-            font-size: 2.8em;
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5em;
             letter-spacing: 2px;
-            box-shadow: 0 0 40px rgba(0,0,0,0.3);
+            animation: pulse 3s infinite;
+            box-shadow: 0 0 50px rgba(0,255,255,0.6);
         }
         .container {
-            max-width: 900px;
-            margin: 40px auto;
+            max-width: 1000px;
+            margin: 50px auto;
             padding: 30px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+            transform: perspective(1000px) rotateX(2deg);
+            animation: fadeInUp 1s ease forwards;
         }
         h2, h3 {
-            color: #0d47a1;
-            border-left: 4px solid #1a237e;
+            color: #00ffe0;
+            border-left: 4px solid #00ffe0;
             padding-left: 12px;
             margin-top: 30px;
-            text-transform: uppercase;
         }
         .btn-download {
             display: inline-block;
-            padding: 16px 40px;
-            background: linear-gradient(45deg, #1a237e, #3949ab);
-            color: #fff;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #00ff87, #60efff);
+            color: #0f2027;
             font-weight: bold;
             text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(26,35,126,0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(0,255,255,0.6);
+            margin-top: 30px;
+            transition: all 0.3s ease;
         }
         .btn-download:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(26,35,126,0.6);
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(0,255,255,0.8);
         }
         ul.features {
             list-style: none;
             padding: 0;
         }
         ul.features li::before {
-            content: "✔ ";
-            color: #1a237e;
-            font-weight: bold;
+            content: "🚀 ";
+            color: #60efff;
         }
         ul.features li {
-            margin-bottom: 12px;
-            font-size: 1.05em;
+            margin-bottom: 10px;
+            font-size: 1.1em;
         }
         a {
-            color: #0d47a1;
-            text-decoration: underline;
+            color: #60efff;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: linear-gradient(90deg, #1a237e, #0d47a1);
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
             color: #fff;
             font-size: 0.9em;
             margin-top: 60px;
+        }
+        @keyframes pulse {
+            0% { text-shadow: 0 0 10px #00c6ff; }
+            100% { text-shadow: 0 0 40px #00c6ff; }
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    Sigorta Acenteleri için Dijital Dönüşüm
+    Sigorta Acente Yazılımı
 </header>
 
 <div class="container">
-    <h2>Sigorta Acentelerine Özel Çözüm</h2>
-    <p>Sigorta acentelerinin iş yükünü hafifletmek, poliçe işlemlerini hızlandırmak ve güvenli bir dijital arşivleme sağlamak için geliştirilmiş yenilikçi bir yazılım.</p>
+    <h2>Proje Özeti</h2>
+    <p>Bu yazılım, sigorta acentelerinin iş akışını güçlendirmek için geliştirildi. PDF dosyalarını kolayca yönet, Google Drive'a bağlan, lisans sistemini kullan ve daha fazlasını keşfet!</p>
 
     <h3>Özellikler</h3>
     <ul class="features">
-        <li>Poliçe Takibi ve Raporlama</li>
-        <li>PDF Belgeleri Kolay Yedekleme</li>
-        <li>Google Drive ile Entegre Çalışma</li>
-        <li>Çoklu Bilgisayar Desteği</li>
-        <li>Lisanslı ve Güvenli Kullanım</li>
+        <li>Poliçe Durumu Kaydetme</li>
+        <li>PDF Yedekleme</li>
+        <li>Google Drive API Desteği</li>
+        <li>Çoklu Bilgisayar Erişimi</li>
+        <li>Otomatik Güncelleme Sistemi</li>
         <li>Kullanıcı Dostu Arayüz</li>
     </ul>
 
-    <h3>Teknoloji Altyapısı</h3>
+    <h3>Teknoloji</h3>
     <ul class="features">
-        <li>Programlama Dili: C#</li>
+        <li>Geliştirme Dili: C#</li>
         <li>Platform: Windows Forms (WinForms)</li>
-        <li>Bulut Teknolojisi: Google Drive API</li>
+        <li>Bulut: Google Drive API</li>
     </ul>
 
-    <h3>Programı İndir</h3>
-    <a href="https://github.com/ArdaKDGN/SigortaAcenteYazilimi/releases/download/Kurulum/Sigorta.Acente.Yazilimi.Kurulum.msi" class="btn-download" target="_blank">🚀 Şimdi İndir</a>
+    <h3>İndir</h3>
+    <a href="https://github.com/ArdaKDGN/SigortaAcenteYazilimi/releases/download/Kurulum/Sigorta.Acente.Yazilimi.Kurulum.msi" class="btn-download" target="_blank">🚀 Programı İndir</a>
 
     <h3>İletişim</h3>
-    <p>Sigorta acentenizin dijital dönüşümü için bizimle iletişime geçin: <a href="mailto:ardaakdogan@outlook.com.tr">ardaakdogan@outlook.com.tr</a></p>
+    <p>Her türlü görüş, öneri ve destek talepleriniz için: <a href="mailto:ardaakdogan@outlook.com.tr">ardaakdogan@outlook.com.tr</a></p>
 </div>
 
 <footer>
